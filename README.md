@@ -10,6 +10,8 @@ HZengine Script 是为了方便创作者开发视觉小说而生的专用脚本�
 
 由于 HZengine Script 高度借鉴了 Ren'Py 的语法，快速入门章节也会仿照 Ren'Py 相关内容的结构编写。后续的具体介绍会明显区分出二者的底层实现原理和使用细节。
 
+HZengine Script 的剧本文件扩展名为 .hzs，一个项目中可以包含多个剧本文件。
+
 ## 一个简单的游戏
 
 ```renpy
@@ -147,7 +149,7 @@ pause
 pause 3.0
 ```
 
-### 结束游戏
+## 结束游戏
 
 使用 **return 语句** 可以使游戏结束（这是暂时的解释，通过后续的学习，你会了解到它实际的工作原理），无需关心其他事，不过结束游戏之前，别忘了显示一些东西来告诉玩家游戏已经结束，比如结局名或者编号
 
@@ -159,3 +161,89 @@ return
 
 
 通过以上的内容，我们能创建出一个动态小说(kinetic novel)，即不包含分支的一种视觉小说形式。接下来的部分，我们将探索如何设置一些分支、好感度等功能。
+
+## label 和 jump 语句
+
+**label 语句** 用于在剧本文件中标记脚本点位置，由星号(\*)加上标签名组成，如
+
+```renpy
+*start
+```
+
+start 是一个特殊的 label，因为 HZengine 将会从 start 标签开始运行剧本。
+
+**jump 语句** 可以在剧本执行过程中，跳转到某个 label 处，并继续执行，例如
+
+```renpy
+*middle
+"哈哈，这里是middle标签哦"
+jump after
+
+*start
+"你好，这里是start标签，也是整个剧本文件运行的开始位置。"
+jump middle
+
+*after
+"这里是after标签"
+```
+
+在这个例子中，我们完成了一个简单的带标签跳转的小剧本，运行后，显示顺序应该是这样的
+
+* ```
+  你好，这里是start标签，也是整个剧本文件运行的开始位置。
+  ```
+* ```
+  哈哈，这里是middle标签哦
+  ```
+* ```
+  这里是after标签
+  ```
+
+与 Ren'Py 不同的是，当一个标签内的语句执行完后，并不会结束游戏，而是继续往下执行，直到剧本文件结尾，例如
+
+```renpy
+*start
+"你好，我是start标签下的语句"
+
+*nice
+"这里是nice标签下的语句哦"
+```
+
+在这里，start 标签下的语句不含 `jump nice` 之类的语句，但剧本仍会向下执行，因此这两句话都会在游戏过程中展示。
+
+## menu 和 branch 语句
+
+使用 **menu 语句** 和 **branch 语句** 可以给玩家提供一个分支选项：
+
+<pre class="language-renpy"><code class="lang-renpy">e "欢迎来到魔女食堂！你想吃些什么呢"
+menu
+    branch "巧克力蛋糕"
+        e "啊，请稍等，蛋糕马上出炉啦"
+    end branch
+    branch "水果燕麦片"
+        e "咦，貌似没有这种东西了"
+<strong>    end branch
+</strong>    branch "我要吃你"
+        e "Oh my god, are you hentai?"
+    end branch
+end menu
+</code></pre>
+
+<pre class="language-renpy"><code class="lang-renpy">*start
+character i "伊雷娜"
+i "欢迎来到魔女食堂！你想吃些什么呢"
+menu
+<strong>@"巧克力蛋糕"
+</strong>    i "啊，请稍等，蛋糕马上出炉啦"
+@"水果燕麦片"
+    i "咦，貌似没有这种东西了"
+    jump @bye
+@"我要吃你"
+    i "Oh my god, are you hentai?"
+    jump @bye
+@bye "我都不要"
+    i "这里可能没有你想要的东西呢..."
+    i "欢迎下次光临~"
+end menu
+</code></pre>
+
