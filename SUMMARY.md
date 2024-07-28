@@ -2,7 +2,7 @@
 
 * [快速入门](README.md)
   * [安装和配置HZengine](kuai-su-ru-men/an-zhuang-he-pei-zhi-hzengine.md)
-  * [项目结构介绍](kuai-su-ru-men/xiang-mu-jie-gou-jie-shao.md)
+  * [HZengine 项目初探](kuai-su-ru-men/hzengine-xiang-mu-chu-tan.md)
   * [一个简单的游戏](kuai-su-ru-men/yi-ge-jian-dan-de-you-xi.md)
   * [打包并发布游戏](kuai-su-ru-men/da-bao-bing-fa-bu-you-xi.md)
 
