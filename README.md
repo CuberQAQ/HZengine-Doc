@@ -22,6 +22,6 @@ HZengine 是一个为 Zepp OS 智能手表设计的视觉小说引擎，你可�
 [yi-ge-jian-dan-de-you-xi.md](kuai-su-ru-men/yi-ge-jian-dan-de-you-xi.md)
 {% endcontent-ref %}
 
-{% content-ref url="kuai-su-ru-men/da-bao-bing-fa-bu-you-xi.md" %}
-[da-bao-bing-fa-bu-you-xi.md](kuai-su-ru-men/da-bao-bing-fa-bu-you-xi.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}

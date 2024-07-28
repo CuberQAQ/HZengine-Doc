@@ -4,7 +4,6 @@
   * [安装和配置HZengine](kuai-su-ru-men/an-zhuang-he-pei-zhi-hzengine.md)
   * [HZengine 项目初探](kuai-su-ru-men/hzengine-xiang-mu-chu-tan.md)
   * [一个简单的游戏](kuai-su-ru-men/yi-ge-jian-dan-de-you-xi.md)
-  * [打包并发布游戏](kuai-su-ru-men/da-bao-bing-fa-bu-you-xi.md)
 
 ## HZengine Core 框架设计
 

@@ -1,7 +1,11 @@
-# 快速入门
+# 一个简单的游戏
 
 {% hint style="info" %}
-注意：本文档中 HZengine Script 的内容非最终版本，将随着设计完善而增加、修改甚至删除部分语法特性。不要瞎移植一通然后又得重新改了捏\~
+注意：本文档中 HZengine Script 的内容非最终版本，将随着设计完善而增加、修改甚至删除部分语法特性。
+{% endhint %}
+
+{% hint style="info" %}
+由于引擎正在开发中，有些已有计划支持但暂不可用的功能，会特别说明（“未实装”）
 {% endhint %}
 
 ## HZengine Script 简介
@@ -11,6 +15,8 @@ HZengine Script 是为了方便创作者开发视觉小说而生的专用脚本�
 由于 HZengine Script 高度借鉴了 Ren'Py 的语法，快速入门章节也会仿照 Ren'Py 相关内容的结构编写。后续的具体介绍会明显区分出二者的底层实现原理和使用细节。
 
 HZengine Script 的剧本文件扩展名为 .hzs，一个项目中可以包含多个剧本文件。
+
+hzs文件的存放目录为 assets/project/script，在此之外的 hzs 文件不会被加载。
 
 ## 一个简单的游戏
 
@@ -91,7 +97,7 @@ e "嘿嘿，让我看看！"
 
 具有相同 tag 的图像不会同时显示。当一个图像被显示出来时，它会替换掉与之具有相同 tag 的图像。
 
-HZengine 会在游戏项目的 image 目录下搜索图像文件。HZengine 支持大部分常见图像文件，如 PNG、JPEG、WEBP 等，但请注意它们对透明像素的支持（PNG有透明通道而JPEG没有）。
+HZengine 会在游戏项目的 image 目录下搜索图像文件。HZengine 目前仅支持 PNG 格式图片。
 
 图像文件的命名十分重要，HZengine 会使用去掉扩展名，并将英文字母强制转换成小写后的文件名作为图像名，例如
 
@@ -111,7 +117,7 @@ m "再见！"
 
 在 hide 语句后指定了要隐藏的图像的 tag 标签"elysia"。
 
-## 音乐和音效
+## 音乐和音效（未实装）
 
 相当多的视觉小说拥有背景音或角色配音等，在 HZengine 中允许使用 **play 语句** 播放音频，例如
 
@@ -143,7 +149,7 @@ stop music
 pause
 ```
 
-可以在 pause 后加一个数字，则游戏只会暂停对应的秒数
+可以在 pause 后加一个数字，则游戏只会暂停对应的秒数（未实装）
 
 ```renpy
 pause 3.0
@@ -211,23 +217,9 @@ jump middle
 
 在这里，start 标签下的语句不含 `jump nice` 之类的语句，但剧本仍会向下执行，因此这两句话都会在游戏过程中展示。
 
-## menu 和 branch 语句
+## menu 语句
 
-使用 **menu 语句** 和 **branch 语句** 可以给玩家提供一个分支选项：
-
-<pre class="language-renpy"><code class="lang-renpy">e "欢迎来到魔女食堂！你想吃些什么呢"
-menu
-    branch "巧克力蛋糕"
-        e "啊，请稍等，蛋糕马上出炉啦"
-    end branch
-    branch "水果燕麦片"
-        e "咦，貌似没有这种东西了"
-<strong>    end branch
-</strong>    branch "我要吃你"
-        e "Oh my god, are you hentai?"
-    end branch
-end menu
-</code></pre>
+使用 **menu 语句** 可以给玩家提供一个分支选项：
 
 <pre class="language-renpy"><code class="lang-renpy">*start
 character i "伊雷娜"
@@ -237,13 +229,16 @@ menu
 </strong>    i "啊，请稍等，蛋糕马上出炉啦"
 @"水果燕麦片"
     i "咦，貌似没有这种东西了"
-    jump @bye
 @"我要吃你"
     i "Oh my god, are you hentai?"
-    jump @bye
-@bye "我都不要"
+@"我都不要"
     i "这里可能没有你想要的东西呢..."
     i "欢迎下次光临~"
 end menu
 </code></pre>
 
+menu 语句由单独一行 menu 开始，由单独一行的 end menu 结束。
+
+在 menu 语句中，使用 @ 标签可以声明一个选项，后面跟着一对**英文**引号，里面是选项的文字。当玩家选择一个选项时，会执行对应 @ 标签后的脚本。
+
+未完待续
