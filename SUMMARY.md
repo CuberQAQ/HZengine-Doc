@@ -5,6 +5,22 @@
   * [HZengine 项目初探](kuai-su-ru-men/hzengine-xiang-mu-chu-tan.md)
   * [一个简单的游戏](kuai-su-ru-men/yi-ge-jian-dan-de-you-xi.md)
 
+## HZengine Script 教程
+
+* [基础](hzengine-script-jiao-cheng/ji-chu.md)
+* [对话](hzengine-script-jiao-cheng/dui-hua.md)
+* [背景与立绘](hzengine-script-jiao-cheng/bei-jing-yu-li-hui.md)
+* [跳转](hzengine-script-jiao-cheng/tiao-zhuan.md)
+* [音频](hzengine-script-jiao-cheng/yin-pin.md)
+* [选择分支](hzengine-script-jiao-cheng/xuan-ze-fen-zhi.md)
+* [变换与过渡动画](hzengine-script-jiao-cheng/bian-huan-yu-guo-du-dong-hua.md)
+* [变量](hzengine-script-jiao-cheng/bian-liang.md)
+* [循环与条件判断](hzengine-script-jiao-cheng/xun-huan-yu-tiao-jian-pan-duan/README.md)
+  * [条件语句(if)](hzengine-script-jiao-cheng/xun-huan-yu-tiao-jian-pan-duan/tiao-jian-yu-ju-if.md)
+  * [循环语句(while)](hzengine-script-jiao-cheng/xun-huan-yu-tiao-jian-pan-duan/xun-huan-yu-ju-while.md)
+* [装饰器](hzengine-script-jiao-cheng/zhuang-shi-qi.md)
+* [内嵌 JS（实验性）](hzengine-script-jiao-cheng/nei-qian-js-shi-yan-xing.md)
+
 ## HZengine Core 框架设计
 
 * [概览](hzengine-core-kuang-jia-she-ji/framework.md)
