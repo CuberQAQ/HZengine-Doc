@@ -15,9 +15,9 @@
 * [选择分支](hzengine-script-jiao-cheng/xuan-ze-fen-zhi.md)
 * [变换与过渡动画](hzengine-script-jiao-cheng/bian-huan-yu-guo-du-dong-hua.md)
 * [变量](hzengine-script-jiao-cheng/bian-liang.md)
-* [循环与条件判断](hzengine-script-jiao-cheng/xun-huan-yu-tiao-jian-pan-duan/README.md)
-  * [条件语句(if)](hzengine-script-jiao-cheng/xun-huan-yu-tiao-jian-pan-duan/tiao-jian-yu-ju-if.md)
-  * [循环语句(while)](hzengine-script-jiao-cheng/xun-huan-yu-tiao-jian-pan-duan/xun-huan-yu-ju-while.md)
+* [条件判断与循环](hzengine-script-jiao-cheng/tiao-jian-pan-duan-yu-xun-huan/README.md)
+  * [条件语句(if)](hzengine-script-jiao-cheng/tiao-jian-pan-duan-yu-xun-huan/tiao-jian-yu-ju-if.md)
+  * [循环语句(while)](hzengine-script-jiao-cheng/tiao-jian-pan-duan-yu-xun-huan/xun-huan-yu-ju-while.md)
 * [装饰器](hzengine-script-jiao-cheng/zhuang-shi-qi.md)
 * [内嵌 JS（实验性）](hzengine-script-jiao-cheng/nei-qian-js-shi-yan-xing.md)
 
