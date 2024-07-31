@@ -62,7 +62,7 @@ m "起猛了，你怎么躺在地上"
 e "...这还用问，当然是摔倒了啊！"
 ```
 
-第二行和第三行使用 **character 语句** 定义了角色。第二行中定义一个短名为"k"，长名为"爱希利亚"的角色。
+第二行和第三行使用 **character 语句** 定义了角色。第二行中定义一个短名为"e"，长名为"爱希利亚"的角色。
 
 后面的三行中，我们使用定义的角色对象展示了人物对话。
 
@@ -72,7 +72,7 @@ e "...这还用问，当然是摔倒了啊！"
 
 ```renpy
 *start
-character k "爱希利亚"
+character e "爱希利亚"
 character m "我"
 scene bg village morning
 "过了一会，我们来到了山腰上的一座寺庙，传闻这里曾有精灵出没"
@@ -99,11 +99,11 @@ e "嘿嘿，让我看看！"
 
 HZengine 会在游戏项目的 image 目录下搜索图像文件。HZengine 目前仅支持 PNG 格式图片。
 
-图像文件的命名十分重要，HZengine 会使用去掉扩展名，并将英文字母强制转换成小写后的文件名作为图像名，例如
+图像文件的命名十分重要，HZengine 会使用去掉扩展名，然后将英文字母强制转换成小写，再将下划线转成空格后的文件名作为图像名，例如
 
 * "bg village morning.jpg" -> `bg village morning`
-* "elysia surprised.png" -> `elysia surprised`
-* "elysia smile.png" -> `elysia smile`
+* "elysia\_surprised.png" -> `elysia surprised`
+* "Elysia Smile.png" -> `elysia smile`
 
 **hide 语句** ，可以用于隐藏已经显示出的图像，例如
 
@@ -219,10 +219,12 @@ jump middle
 
 ## menu 语句
 
+<figure><img src="../.gitbook/assets/dae5310c0522805fe9abbe31a9b8ae80.png" alt=""><figcaption><p>分支选项示例</p></figcaption></figure>
+
 使用 **menu 语句** 可以给玩家提供一个分支选项：
 
-<pre class="language-renpy"><code class="lang-renpy">*start
-character i "伊雷娜"
+<pre class="language-renpy"><code class="lang-renpy"><strong>*start
+</strong>character i "伊雷娜"
 i "欢迎来到魔女食堂！你想吃些什么呢"
 menu
 <strong>@"巧克力蛋糕"
@@ -240,5 +242,7 @@ end menu
 menu 语句由单独一行 menu 开始，由单独一行的 end menu 结束。
 
 在 menu 语句中，使用 @ 标签可以声明一个选项，后面跟着一对**英文**引号，里面是选项的文字。当玩家选择一个选项时，会执行对应 @ 标签后的脚本。
+
+
 
 未完待续

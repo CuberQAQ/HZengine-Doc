@@ -10,7 +10,7 @@
 
 ## 图片资源
 
-HZengine 暂时只支持 png 图片。图片资源的位置是 game/image，你可以放在它的任何子文件夹下，HZengine 会加载 image 文件夹中的全部图片。
+HZengine 暂时只支持 png 图片。图片资源的位置是 project/image，你可以放在它的任何子文件夹下，HZengine 会加载 image 文件夹中的全部图片。
 
 ## show 语句
 

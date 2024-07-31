@@ -4,7 +4,7 @@
 
 例如，
 
-（图片）
+<figure><img src="../.gitbook/assets/dae5310c0522805fe9abbe31a9b8ae80 (1).png" alt=""><figcaption><p>选择分支</p></figcaption></figure>
 
 以上这种通过让玩家选择一个按钮来触发不同分支剧情，叫做选择分支。
 

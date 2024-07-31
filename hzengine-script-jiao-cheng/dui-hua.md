@@ -15,9 +15,9 @@ say 语句是单行语句，由一个或两个字符串组成。当只有一个�
 
 这两行的显示效果分别如下所示：
 
-（图片1）
+<figure><img src="../.gitbook/assets/43cc5eca9a11424f307fb71f3f9c8901.png" alt=""><figcaption></figcaption></figure>
 
-（图片2）
+<figure><img src="../.gitbook/assets/b5a69511319177ed6f7ae5df95a9a1d6.png" alt=""><figcaption></figcaption></figure>
 
 受手表屏幕大小限制，请避免一次显示过长的对话。角色名区域显示不出多行文字，只有对话文字可以。
 

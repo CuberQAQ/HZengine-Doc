@@ -4,10 +4,10 @@
 
 ```renpy
 * start
-$ sd.times = 1
+$ sd.times = 0
 
 * 轮回
-"这是你第[sd.times++]次轮回了"
+"这是你第[++sd.times]次轮回了"
 if sd.times >= 10
     "恭喜你，轮回了10次，可以解放了"
     jump 轮回之后的故事

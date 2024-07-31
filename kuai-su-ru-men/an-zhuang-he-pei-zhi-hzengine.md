@@ -2,7 +2,7 @@
 
 ## 一. 配置 Zepp OS 开发环境
 
-在基于 HZengine 创作视觉小说之前，你需要先配置 Zepp OS 开发环境，具体操作方法参见 [https://docs.zepp.com/zh-cn/docs/guides/quick-start/environment/](https://docs.zepp.com/zh-cn/docs/guides/quick-start/environment/https://docs.zepp.com/zh-cn/docs/guides/quick-start/environment/)
+在基于 HZengine 创作视觉小说之前，你需要先配置 Zepp OS 开发环境，具体操作方法参见 [https://docs.zepp.com/zh-cn/docs/guides/quick-start/environment/](https://docs.zepp.com/zh-cn/docs/guides/quick-start/environment/)
 
 通过 Zepp OS 官方文档的环境配置教程，你应该已经安装了 Node.js ，Zeus CLI，Zepp OS 模拟器。
 
@@ -38,9 +38,9 @@ hze create hello-hzengine
 
 这将在在当前文件夹下创建一个叫 `hello-hzengine` 的视觉小说项目。如果当前文件夹下存在同名文件夹，你需要更换一个名字。
 
-接下来，你应该看见一个列表，请选择一个初始项目模板，这里我们选择 template1，创建一个实例项目
+接下来，你应该看见一个如下图所示的列表，请选择一个初始项目模板（虽然就只有一个），这里我们选择 Template Project，回车确定，就能创建一个实例项目。
 
-\[图片ww]
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 一切就绪
 
