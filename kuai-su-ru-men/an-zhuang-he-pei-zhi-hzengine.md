@@ -4,6 +4,8 @@
 
 在基于 HZengine 创作视觉小说之前，你需要先配置 Zepp OS 开发环境，具体操作方法参见 [https://docs.zepp.com/zh-cn/docs/guides/quick-start/environment/](https://docs.zepp.com/zh-cn/docs/guides/quick-start/environment/)
 
+如果在安装Zeus CLI的过程中出现进度条卡死问题，你应该尝试对npm进行换源。
+
 通过 Zepp OS 官方文档的环境配置教程，你应该已经安装了 Node.js ，Zeus CLI，Zepp OS 模拟器。
 
 你可以打开命令行，使用以下命令检查环境是否正确配置
